@@ -7,6 +7,8 @@
    <meta name="keywords" content="Design Pattern, L&uuml;ckentext, JavaScript, Abfrage">
    <meta name="robots" content="index,follow">
    <title>Design Pattern</title>
+   <script type="text/javascript" src="main.js"></script>
+
    <style type="text/css">
    <!--
       p, td { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; }
@@ -26,7 +28,11 @@
 <table width="80%" border="0" cellspacing="0" cellpadding="0"><tr><td bgcolor="#8888FF">
 <table width="100%" border="0" cellspacing="3" cellpadding="5">
 <tr>
-   <td bgcolor="#EEEEFF" align="center" class="h">Design Pattern</td>
+   <td bgcolor="#EEEEFF" align="center" class="h"><h1>Design Pattern Quiz</h1></td>
+</tr>
+<tr>
+    <td><h2>Factory Design Pattern</h2>
+</td>
 </tr>
 <tr>
    <td width="100%" bgcolor="#CCCCFF">
@@ -139,85 +145,6 @@ $Thomas= introduceHuman(<input type="text" size="13" maxlength="15" name="text16
 </center>
 </form>
 
-<script>
-   if (document.images) {
-    bild0 = new Image(); bild0.src = "exclamation-circle-solid.svg";
-    bild1 = new Image(); bild1.src = "check-square-solid.svg";
-}
 
-anzluecken = 16;
-
-// Define the correctAnswers array here
-const correctAnswers = [
-    "Human",
-    "Human",
-    "Human",
-    "Human",
-    "HumanFactory",
-    "Human",
-    "Man",
-    "HumanFactory",
-    "Human",
-    "Woman",
-    "HumanFactory",
-    "Human",
-    "introduce",
-    "ManFactory",
-    "WomanFactory",
-    "$manFactory"
-];
-
-function checkAnswers() {
-    const userAnswers = [];
-
-    for (let i = 1; i <= anzluecken; i++) {
-        const inputName = `text${i}`;
-        const input = document.formular[inputName];
-
-        if (input) {
-            const userAnswer = input.value.trim();
-            userAnswers.push(userAnswer);
-
-            if (userAnswer === "") {
-                document[`auswertung${i}`].src = "exclamation-circle-solid.svg"; // Empty input
-            } else {
-                const correctAnswer = correctAnswers[i - 1];
-                if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-                    document[`auswertung${i}`].src = "check-square-solid.svg"; // Correct answer
-                } else {
-                    document[`auswertung${i}`].src = "exclamation-circle-solid.svg"; // Incorrect answer
-                }
-            }
-        }
-    }
-
-    let allCorrect = true;
-    for (let i = 0; i < correctAnswers.length; i++) {
-        if (userAnswers[i].toLowerCase() !== correctAnswers[i].toLowerCase()) {
-            allCorrect = false;
-            break; // Break the loop early if any answer is incorrect
-        }
-    }
-
-    if (allCorrect) {
-        alert("Glueckwunsch! Alle Antworten sind richtig! Du Design Pattern Master.");
-    } else {
-        alert("Nicht alle Antworten sind richtig. Schau mal nach, wo der Fehler sein koennte");
-    }
-}
-
-
-function clearInputs() {
-    for (let i = 1; i <= anzluecken; i++) {
-        const inputName = `text${i}`;
-        const input = document.formular[inputName];
-        
-        if (input) {
-            input.value = "";
-            document[`auswertung${i}`].src = "exclamation-circle-solid.svg";
-        }
-    }
-}
-</script>
 </body>
 </html>

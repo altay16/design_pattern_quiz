@@ -27,6 +27,7 @@ const correctAnswers = [
 
 function checkAnswers() {
     const userAnswers = [];
+    let correctAnswersCount = 0;
 
     for (let i = 1; i <= anzluecken; i++) {
         const inputName = `text${i}`;
@@ -42,6 +43,7 @@ function checkAnswers() {
                 const correctAnswer = correctAnswers[i - 1];
                 if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
                     document[`auswertung${i}`].src = "check-square-solid.svg"; // Correct answer
+                    correctAnswersCount++;
                 } else {
                     document[`auswertung${i}`].src = "exclamation-circle-solid.svg"; // Incorrect answer
                 }
@@ -49,30 +51,9 @@ function checkAnswers() {
         }
     }
 
-    let allCorrect = true;
-    for (let i = 0; i < correctAnswers.length; i++) {
-        if (userAnswers[i].toLowerCase() !== correctAnswers[i].toLowerCase()) {
-            allCorrect = false;
-            break; // Break the loop early if any answer is incorrect
-        }
-    }
-
-    if (allCorrect) {
-        alert("Glueckwunsch! Alle Antworten sind richtig! Du Design Pattern Master.");
+    if (correctAnswersCount === anzluecken) {
+        alert(`Glueckwunsch! Alle ${correctAnswersCount}/${anzluecken} Antworten sind richtig! Du Design Pattern Master.`);
     } else {
-        alert("Nicht alle Antworten sind richtig. Schau mal nach, wo der Fehler sein koennte");
-    }
-}
-
-
-function clearInputs() {
-    for (let i = 1; i <= anzluecken; i++) {
-        const inputName = `text${i}`;
-        const input = document.formular[inputName];
-        
-        if (input) {
-            input.value = "";
-            document[`auswertung${i}`].src = "exclamation-circle-solid.svg";
-        }
+        alert(`${correctAnswersCount}/${anzluecken} Antworten sind richtig. Die Falschen Antworten sind markiert mit einem (!) markiert`);
     }
 }

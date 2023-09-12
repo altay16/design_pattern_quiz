@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1;">
+   <meta name="author" content="Marco">
+   <meta name="description" content="Ein L&uuml;ckentext zum Ausf&uuml;llen im Browser zum Thema 'Design Pattern'">
+   <meta name="keywords" content="Design Pattern, L&uuml;ckentext, JavaScript, Abfrage">
+   <meta name="robots" content="index,follow">
+   <title>Design Pattern</title>
+   <style type="text/css">
+   <!--
+      p, td { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; }
+      input { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; }
+      .h { font-size: 15px; font-weight: bold; }
+      .unten { font-size: 10px; }
+      a:link    { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:active  { text-decoration: none; }
+      a:hover   { text-decoration: underline; }
+   -->
+   </style>
+</head>
+<body bgcolor="#000000" text="#000000">
+<form name="formular">
+<center>
+<table width="80%" border="0" cellspacing="0" cellpadding="0"><tr><td bgcolor="#8888FF">
+<table width="100%" border="0" cellspacing="3" cellpadding="5">
+<tr>
+   <td bgcolor="#EEEEFF" align="center" class="h">Design Pattern</td>
+</tr>
+<tr>
+   <td width="100%" bgcolor="#CCCCFF">
+ Abstract Product Class<br />
+<br />
+abstract class <input type="text" size="7" maxlength="9" name="text1"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung1">{<br />
+<br />
+ abstract public function introduce();<br />
+<br />
+}<br />
+<br />
+<br />
+<br />
+class Man extends <input type="text" size="7" maxlength="9" name="text2"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung2"> {<br />
+<br />
+ public function introduce() {<br />
+<br />
+        echo &quot;I am a man.n&quot;;<br />
+<br />
+    }<br />
+<br />
+}<br />
+<br />
+<br />
+<br />
+class Woman extends <input type="text" size="7" maxlength="9" name="text3"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung3"> {<br />
+<br />
+ public function introduce() {<br />
+<br />
+        echo &quot;I am a woman.n&quot;;<br />
+<br />
+    }<br />
+<br />
+}<br />
+<br />
+<br />
+<br />
+abstract class HumanFactory {<br />
+<br />
+ abstract public function createHuman(): <input type="text" size="7" maxlength="9" name="text4"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung4">;<br />
+<br />
+}<br />
+<br />
+<br />
+<br />
+class ManFactory extends <input type="text" size="14" maxlength="16" name="text5""> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung5"> {<br />
+<br />
+ public function createHuman(): <input type="text" size="7" maxlength="9" name="text6"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung6"> {<br />
+<br />
+        return new <input type="text" size="5" maxlength="7" name="text7"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung7">();<br />
+<br />
+    }<br />
+<br />
+}<br />
+<br />
+<br />
+<br />
+class WomanFactory extends <input type="text" size="14" maxlength="16" name="text8"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung8"> {<br />
+<br />
+ public function createHuman(): <input type="text" size="7" maxlength="9" name="text9"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung9"> {<br />
+<br />
+        return new <input type="text" size="7" maxlength="9" name="text10"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung10">();<br />
+<br />
+    }<br />
+<br />
+}<br />
+<br />
+<br />
+<br />
+function introduceHuman(<input type="text" size="14" maxlength="16" name="text11"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung11"> $factory): <input type="text" size="7" maxlength="9" name="text12"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung12"> {<br />
+<br />
+ $human = $factory-&gt;createHuman();<br />
+<br />
+    $human-&gt;<br />
+<br />
+<input type="text" size="11" maxlength="13" name="text13"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung13">();<br />
+<br />
+    return $human;<br />
+<br />
+}<br />
+<br />
+<br />
+<br />
+$manFactory = new <input type="text" size="12" maxlength="14" name="text14" > <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung14">();<br />
+<br />
+$womanFactory = new <input type="text" size="14" maxlength="16" name="text15" > <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung15">();<br />
+<br />
+<br />
+<br />
+$Thomas= introduceHuman(<input type="text" size="13" maxlength="15" name="text16" > <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung16">);<br />
+<br />
+<br />
+<br />
+</td>
+</tr>
+<tr>
+   <td bgcolor="#AAAAFF">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      </table>
+   </td>
+</tr>
+<tr>
+   <td bgcolor="#AAAAFF" align="center">
+      <!-- Add the Submit button here -->
+      <input type="button" value="L&ouml;sung checken" onClick="checkAnswers();">
+   </td>
+</tr>
+</table>
+</td></tr></table>
+</center>
+</form>
+
+<script>
+   if (document.images) {
+    bild0 = new Image(); bild0.src = "exclamation-circle-solid.svg";
+    bild1 = new Image(); bild1.src = "check-square-solid.svg";
+}
+
+anzluecken = 16;
+
+// Define the correctAnswers array here
+const correctAnswers = [
+    "Human",
+    "Human",
+    "Human",
+    "Human",
+    "HumanFactory",
+    "Human",
+    "Man",
+    "HumanFactory",
+    "Human",
+    "Woman",
+    "HumanFactory",
+    "Human",
+    "introduce",
+    "ManFactory",
+    "WomanFactory",
+    "$manFactory"
+];
+
+function checkAnswers() {
+    const userAnswers = [];
+
+    for (let i = 1; i <= anzluecken; i++) {
+        const inputName = `text${i}`;
+        const input = document.formular[inputName];
+
+        if (input) {
+            const userAnswer = input.value.trim();
+            userAnswers.push(userAnswer);
+
+            if (userAnswer === "") {
+                document[`auswertung${i}`].src = "exclamation-circle-solid.svg"; // Empty input
+            } else {
+                const correctAnswer = correctAnswers[i - 1];
+                if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+                    document[`auswertung${i}`].src = "check-square-solid.svg"; // Correct answer
+                } else {
+                    document[`auswertung${i}`].src = "exclamation-circle-solid.svg"; // Incorrect answer
+                }
+            }
+        }
+    }
+
+    let allCorrect = true;
+    for (let i = 0; i < correctAnswers.length; i++) {
+        if (userAnswers[i].toLowerCase() !== correctAnswers[i].toLowerCase()) {
+            allCorrect = false;
+            break; // Break the loop early if any answer is incorrect
+        }
+    }
+
+    if (allCorrect) {
+        alert("Glueckwunsch! Alle Antworten sind richtig! Du Design Pattern Master.");
+    } else {
+        alert("Nicht alle Antworten sind richtig. Schau mal nach, wo der Fehler sein koennte");
+    }
+}
+
+
+function clearInputs() {
+    for (let i = 1; i <= anzluecken; i++) {
+        const inputName = `text${i}`;
+        const input = document.formular[inputName];
+        
+        if (input) {
+            input.value = "";
+            document[`auswertung${i}`].src = "exclamation-circle-solid.svg";
+        }
+    }
+}
+</script>
+</body>
+</html>

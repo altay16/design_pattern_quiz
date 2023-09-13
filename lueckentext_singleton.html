@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+   <meta name="author" content="Marco">
+   <meta name="description" content="Ein L&uuml;ckentext zum Ausf&uuml;llen im Browser zum Thema 'Design Pattern'">
+   <meta name="keywords" content="Design Pattern, L&uuml;ckentext, JavaScript, Abfrage">
+   <meta name="robots" content="index,follow">
+   <title>Design Pattern</title>
+   <script type="text/javascript" src="lueckentext_singleton.js"></script>
+
+   <style type="text/css">
+   <!--
+      p, td { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; }
+      input { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; }
+      .h { font-size: 15px; font-weight: bold; }
+      .unten { font-size: 10px; }
+      a:link    { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:active  { text-decoration: none; }
+      a:hover   { text-decoration: underline; }
+   -->
+   </style>
+</head>
+<body bgcolor="#000000" text="#000000">
+<form name="formular">
+<center>
+<table width="80%" border="0" cellspacing="0" cellpadding="0"><tr><td bgcolor="#8888FF">
+<table width="100%" border="0" cellspacing="3" cellpadding="5">
+<tr>
+   <td bgcolor="#EEEEFF" align="center" class="h"><h1>Design Pattern Quiz</h1></td>
+</tr>
+<tr>
+    <td bgcolor="#06d43d"><h2>Singleton</h2>
+</td>
+</tr>
+<tr>
+   <td width="100%" bgcolor="#CCCCFF">
+ Singleton Class<br />
+<br />
+public class Logger {
+    <br /> <br />
+private static <input type="text" size="7" maxlength="9" name="text1"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung1"> instance;
+<br /><br /> <br />
+ private <input type="text" size="7" maxlength="9" name="text2"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung2"> {} <br />
+<br />
+<br />
+<br />
+
+public <input type="text" size="7" maxlength="9" name="text3"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung3"> 
+Logger <input type="text" size="7" maxlength="20" name="text4"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung4">
+{
+    <br/>
+    &emsp; if (instance == <input type="text" size="7" maxlength="9" name="text5"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung5">) { <br/> 
+    &emsp; instance = new <input type="text" size="7" maxlength="9" name="text6"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung6"> ; <br/> 
+    &emsp; } <br/>
+    &emsp; return <input type="text" size="7" maxlength="9" name="text7"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung7">; 
+    <br/> } 
+<br/>
+<br/>
+<br/>
+public void log(String message) { <br/> 
+    &emsp; println(message); <br/> 
+} <br/><br/>
+} <br/><br/>
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+public static void main(String[] args) {
+    <br/><br/>
+    //instanziieren eines loggers <br/>
+    <input type="text" size="7" maxlength="9" name="text8"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung8">
+     logger = Logger.<input type="text" size="7" maxlength="20" name="text9"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung9">
+     <br/><br/>
+     logger.<input type="text" size="7" maxlength="9" name="text10"> <img src="exclamation-circle-solid.svg" width="15" height="15" name="auswertung10">
+     ("Diese Nachricht wird protokolliert");
+     <br/><br/>
+}
+
+</td>
+</tr>
+<tr>
+   <td bgcolor="#AAAAFF">
+   </td>
+</tr>
+<tr>
+   <td bgcolor="#AAAAFF" align="center">
+      <!-- Add the Submit button here -->
+      <input type="button" value="L&ouml;sung checken" onClick="checkAnswers();">
+   </td>
+</tr>
+</table>
+</td></tr></table>
+</center>
+</form>
+
+
+</body>
+</html>
